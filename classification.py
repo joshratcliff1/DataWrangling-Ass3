@@ -233,7 +233,7 @@ def supervisedMLClassify(sim_vec_dict, true_match_set):
          true_mach_set : Set of true matches (record identifier pairs)
     """
 
-    num_folds = 3  # Number of classifiers to create
+    num_folds = 1  # Number of classifiers to create
 
     class_match_set =    set()
     class_nonmatch_set = set()
@@ -338,8 +338,8 @@ def supervisedMLClassify(sim_vec_dict, true_match_set):
             else:
                 num_wrong += 1
 
-        print('  Classifier %d gets %d correct and %d wrong' %
-              (c, num_corr, num_wrong))
+        # print('  Classifier %d gets %d correct and %d wrong' %
+        #       (c, num_corr, num_wrong))
 
         class_list.append(decision_tree)
 
